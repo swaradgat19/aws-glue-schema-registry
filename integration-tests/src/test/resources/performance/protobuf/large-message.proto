@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package com.amazonaws.services.schemaregistry.tests.protobuf.performance;
+
+message LargeMessage {
+  string orderId = 1;
+  Customer customer = 2;
+  repeated OrderItem items = 3;
+  double totalAmount = 4;
+  string currency = 5;
+  string status = 6;
+  string createdAt = 7;
+
+  message Customer {
+    string customerId = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string email = 4;
+    Address billingAddress = 5;
+
+    message Address {
+      string street = 1;
+      string city = 2;
+      string state = 3;
+      string zipCode = 4;
+      string country = 5;
+    }
+  }
+
+  message OrderItem {
+    string productId = 1;
+    string name = 2;
+    string category = 3;
+    double price = 4;
+    int32 quantity = 5;
+  }
+}

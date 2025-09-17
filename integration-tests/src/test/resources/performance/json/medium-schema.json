@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "userId": {"type": "string"},
+    "profile": {
+      "type": "object",
+      "properties": {
+        "firstName": {"type": "string"},
+        "lastName": {"type": "string"},
+        "email": {"type": "string"},
+        "phone": {"type": "string"},
+        "dateOfBirth": {"type": "string"}
+      },
+      "required": ["firstName", "lastName", "email"]
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": {"type": "string"},
+        "city": {"type": "string"},
+        "state": {"type": "string"},
+        "zipCode": {"type": "string"},
+        "country": {"type": "string"}
+      },
+      "required": ["street", "city", "country"]
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "newsletter": {"type": "boolean"},
+        "notifications": {"type": "boolean"},
+        "theme": {"type": "string"},
+        "language": {"type": "string"}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "createdAt": {"type": "string"},
+        "lastLogin": {"type": "string"},
+        "loginCount": {"type": "integer"},
+        "accountType": {"type": "string"}
+      }
+    }
+  },
+  "required": ["userId", "profile", "address"]
+}

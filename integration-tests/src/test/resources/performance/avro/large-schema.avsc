@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "LargeMessage",
+  "namespace": "com.amazonaws.services.schemaregistry.performance",
+  "fields": [
+    {"name": "orderId", "type": "string"},
+    {"name": "customer", "type": {
+      "type": "record",
+      "name": "Customer",
+      "fields": [
+        {"name": "customerId", "type": "string"},
+        {"name": "firstName", "type": "string"},
+        {"name": "lastName", "type": "string"},
+        {"name": "email", "type": "string"},
+        {"name": "billingAddress", "type": {
+          "type": "record",
+          "name": "Address",
+          "fields": [
+            {"name": "street", "type": "string"},
+            {"name": "city", "type": "string"},
+            {"name": "state", "type": "string"},
+            {"name": "zipCode", "type": "string"},
+            {"name": "country", "type": "string"}
+          ]
+        }}
+      ]
+    }},
+    {"name": "items", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "OrderItem",
+        "fields": [
+          {"name": "productId", "type": "string"},
+          {"name": "name", "type": "string"},
+          {"name": "category", "type": "string"},
+          {"name": "price", "type": "double"},
+          {"name": "quantity", "type": "int"}
+        ]
+      }
+    }},
+    {"name": "totalAmount", "type": "double"},
+    {"name": "currency", "type": "string"},
+    {"name": "status", "type": "string"},
+    {"name": "createdAt", "type": "string"}
+  ]
+}

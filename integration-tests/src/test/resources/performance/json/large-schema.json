@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "orderId": {"type": "string"},
+    "customer": {
+      "type": "object",
+      "properties": {
+        "customerId": {"type": "string"},
+        "personalInfo": {
+          "type": "object",
+          "properties": {
+            "firstName": {"type": "string"},
+            "lastName": {"type": "string"},
+            "email": {"type": "string"},
+            "phone": {"type": "string"},
+            "dateOfBirth": {"type": "string"}
+          }
+        },
+        "billingAddress": {
+          "type": "object",
+          "properties": {
+            "street": {"type": "string"},
+            "suite": {"type": "string"},
+            "city": {"type": "string"},
+            "state": {"type": "string"},
+            "zipCode": {"type": "string"},
+            "country": {"type": "string"}
+          }
+        },
+        "shippingAddress": {
+          "type": "object",
+          "properties": {
+            "street": {"type": "string"},
+            "apartment": {"type": "string"},
+            "city": {"type": "string"},
+            "state": {"type": "string"},
+            "zipCode": {"type": "string"},
+            "country": {"type": "string"}
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productId": {"type": "string"},
+          "name": {"type": "string"},
+          "category": {"type": "string"},
+          "price": {"type": "number"},
+          "quantity": {"type": "integer"},
+          "specifications": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "method": {"type": "string"},
+        "cardInfo": {
+          "type": "object",
+          "properties": {
+            "last4": {"type": "string"},
+            "brand": {"type": "string"},
+            "expiryMonth": {"type": "integer"},
+            "expiryYear": {"type": "integer"}
+          }
+        },
+        "transactionId": {"type": "string"},
+        "amount": {"type": "number"},
+        "currency": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "shipping": {
+      "type": "object",
+      "properties": {
+        "method": {"type": "string"},
+        "carrier": {"type": "string"},
+        "trackingNumber": {"type": "string"},
+        "estimatedDelivery": {"type": "string"},
+        "cost": {"type": "number"}
+      }
+    },
+    "orderMetadata": {
+      "type": "object",
+      "properties": {
+        "createdAt": {"type": "string"},
+        "updatedAt": {"type": "string"},
+        "source": {"type": "string"},
+        "salesRep": {"type": "string"},
+        "promotionCodes": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "required": ["orderId", "customer", "items", "payment"]
+}

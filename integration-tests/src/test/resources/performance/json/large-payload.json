@@ -1,0 +1,101 @@
+{
+  "orderId": "order-98765",
+  "customer": {
+    "customerId": "cust-54321",
+    "personalInfo": {
+      "firstName": "Robert",
+      "lastName": "Johnson",
+      "email": "robert.johnson@enterprise.com",
+      "phone": "212-555-0123",
+      "dateOfBirth": "1985-03-22"
+    },
+    "billingAddress": {
+      "street": "456 Enterprise Blvd",
+      "suite": "Suite 789",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
+    },
+    "shippingAddress": {
+      "street": "123 Delivery Lane",
+      "apartment": "Apt 4B",
+      "city": "Brooklyn",
+      "state": "NY",
+      "zipCode": "11201",
+      "country": "USA"
+    }
+  },
+  "items": [
+    {
+      "productId": "prod-001",
+      "name": "Wireless Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 199.99,
+      "quantity": 2,
+      "specifications": {
+        "brand": "TechCorp",
+        "model": "WH-1000XM4",
+        "color": "Black",
+        "weight": "254g",
+        "batteryLife": "30 hours"
+      }
+    },
+    {
+      "productId": "prod-002",
+      "name": "USB-C Charging Cable",
+      "category": "Accessories",
+      "price": 24.99,
+      "quantity": 3,
+      "specifications": {
+        "brand": "CableCorp",
+        "length": "6 feet",
+        "color": "White",
+        "dataTransfer": "480 Mbps",
+        "powerDelivery": "100W"
+      }
+    },
+    {
+      "productId": "prod-003",
+      "name": "Laptop Stand",
+      "category": "Office Supplies",
+      "price": 89.99,
+      "quantity": 1,
+      "specifications": {
+        "brand": "ErgoCorp",
+        "material": "Aluminum",
+        "adjustable": true,
+        "maxWeight": "15 lbs",
+        "dimensions": "12x10x6 inches"
+      }
+    }
+  ],
+  "payment": {
+    "method": "credit_card",
+    "cardInfo": {
+      "last4": "4321",
+      "brand": "Visa",
+      "expiryMonth": "12",
+      "expiryYear": "2025"
+    },
+    "transactionId": "txn-abc123def456",
+    "amount": 489.95,
+    "currency": "USD",
+    "status": "completed"
+  },
+  "shipping": {
+    "method": "standard",
+    "carrier": "FedEx",
+    "trackingNumber": "1234567890123456",
+    "estimatedDelivery": "2023-12-15",
+    "cost": 9.99
+  },
+  "orderMetadata": {
+    "createdAt": "2023-12-10T09:15:30Z",
+    "updatedAt": "2023-12-10T09:16:45Z",
+    "source": "web",
+    "salesRep": "sales-rep-789",
+    "promotionCodes": ["SAVE10", "FREESHIP"],
+    "notes": "Customer requested expedited processing"
+  }
+}
