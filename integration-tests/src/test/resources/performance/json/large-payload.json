@@ -1,31 +1,23 @@
 {
   "orderId": "order-98765",
-  "customer": {
-    "customerId": "cust-54321",
-    "personalInfo": {
-      "firstName": "Robert",
-      "lastName": "Johnson",
-      "email": "robert.johnson@enterprise.com",
-      "phone": "212-555-0123",
-      "dateOfBirth": "1985-03-22"
-    },
-    "billingAddress": {
-      "street": "456 Enterprise Blvd",
-      "suite": "Suite 789",
-      "city": "New York",
-      "state": "NY",
-      "zipCode": "10001",
-      "country": "USA"
-    },
-    "shippingAddress": {
-      "street": "123 Delivery Lane",
-      "apartment": "Apt 4B",
-      "city": "Brooklyn",
-      "state": "NY",
-      "zipCode": "11201",
-      "country": "USA"
-    }
-  },
+  "customerId": "cust-54321",
+  "customerFirstName": "Robert",
+  "customerLastName": "Johnson",
+  "customerEmail": "robert.johnson@enterprise.com",
+  "customerPhone": "212-555-0123",
+  "customerDateOfBirth": "1985-03-22",
+  "billingStreet": "456 Enterprise Blvd",
+  "billingSuite": "Suite 789",
+  "billingCity": "New York",
+  "billingState": "NY",
+  "billingZipCode": "10001",
+  "billingCountry": "USA",
+  "shippingStreet": "123 Delivery Lane",
+  "shippingApartment": "Apt 4B",
+  "shippingCity": "Brooklyn",
+  "shippingState": "NY",
+  "shippingZipCode": "11201",
+  "shippingCountry": "USA",
   "items": [
     {
       "productId": "prod-001",
@@ -38,7 +30,14 @@
         "model": "WH-1000XM4",
         "color": "Black",
         "weight": "254g",
-        "batteryLife": "30 hours"
+        "batteryLife": "30 hours",
+        "length": "",
+        "dataTransfer": "",
+        "powerDelivery": "",
+        "material": "",
+        "adjustable": false,
+        "maxWeight": "",
+        "dimensions": ""
       }
     },
     {
@@ -49,10 +48,17 @@
       "quantity": 3,
       "specifications": {
         "brand": "CableCorp",
-        "length": "6 feet",
+        "model": "",
         "color": "White",
+        "weight": "",
+        "batteryLife": "",
+        "length": "6 feet",
         "dataTransfer": "480 Mbps",
-        "powerDelivery": "100W"
+        "powerDelivery": "100W",
+        "material": "",
+        "adjustable": false,
+        "maxWeight": "",
+        "dimensions": ""
       }
     },
     {
@@ -63,6 +69,13 @@
       "quantity": 1,
       "specifications": {
         "brand": "ErgoCorp",
+        "model": "",
+        "color": "",
+        "weight": "",
+        "batteryLife": "",
+        "length": "",
+        "dataTransfer": "",
+        "powerDelivery": "",
         "material": "Aluminum",
         "adjustable": true,
         "maxWeight": "15 lbs",
@@ -70,32 +83,24 @@
       }
     }
   ],
-  "payment": {
-    "method": "credit_card",
-    "cardInfo": {
-      "last4": "4321",
-      "brand": "Visa",
-      "expiryMonth": "12",
-      "expiryYear": "2025"
-    },
-    "transactionId": "txn-abc123def456",
-    "amount": 489.95,
-    "currency": "USD",
-    "status": "completed"
-  },
-  "shipping": {
-    "method": "standard",
-    "carrier": "FedEx",
-    "trackingNumber": "1234567890123456",
-    "estimatedDelivery": "2023-12-15",
-    "cost": 9.99
-  },
-  "orderMetadata": {
-    "createdAt": "2023-12-10T09:15:30Z",
-    "updatedAt": "2023-12-10T09:16:45Z",
-    "source": "web",
-    "salesRep": "sales-rep-789",
-    "promotionCodes": ["SAVE10", "FREESHIP"],
-    "notes": "Customer requested expedited processing"
-  }
+  "paymentMethod": "credit_card",
+  "cardLast4": "4321",
+  "cardBrand": "Visa",
+  "cardExpiryMonth": "12",
+  "cardExpiryYear": "2025",
+  "transactionId": "txn-abc123def456",
+  "paymentAmount": 489.95,
+  "paymentCurrency": "USD",
+  "paymentStatus": "completed",
+  "shippingMethod": "standard",
+  "shippingCarrier": "FedEx",
+  "trackingNumber": "1234567890123456",
+  "estimatedDelivery": "2023-12-15",
+  "shippingCost": 9.99,
+  "createdAt": "2023-12-10T09:15:30Z",
+  "updatedAt": "2023-12-10T09:16:45Z",
+  "source": "web",
+  "salesRep": "sales-rep-789",
+  "promotionCodes": ["SAVE10", "FREESHIP"],
+  "notes": "Customer requested expedited processing"
 }

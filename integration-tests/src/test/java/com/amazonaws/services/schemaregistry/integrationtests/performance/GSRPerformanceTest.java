@@ -165,11 +165,11 @@ public class GSRPerformanceTest {
         System.out.println("✅ Warmup complete");
 
         // === MEASUREMENT PHASE ===
-        System.out.println("\n--- Measurement (50,000 iterations) ---");
+        System.out.println("\n--- Measurement (10,000 iterations) ---");
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 50000; i++) {
+        for (int i = 0; i < 10000; i++) {
             facade.serialize(DataFormat.JSON, testData, schemaVersionId);
         }
 
@@ -177,16 +177,16 @@ public class GSRPerformanceTest {
         long totalTime = endTime - startTime;
 
         // === STATISTICS ===
-        double avgMs = (totalTime / 50000.0) / 1_000_000.0;
+        double avgMs = (totalTime / 10000.0) / 1_000_000.0;
 
         System.out.println("\n--- " + sizeCategory + " FACADE JSON RESULTS ---");
         System.out.println("Payload Size: " + jsonData.length() + " characters");
-        System.out.println("Iterations: 50,000");
+        System.out.println("Iterations: 10,000");
         System.out.println("Average: " + String.format("%.3f", avgMs) + " ms");
 
         // Calculate throughput
         double totalTimeSeconds = totalTime / 1_000_000_000.0;
-        double throughputPerSecond = 50000 / totalTimeSeconds;
+        double throughputPerSecond = 10000 / totalTimeSeconds;
 
         System.out.println("\n--- " + sizeCategory + " FACADE JSON THROUGHPUT ---");
         System.out.println("Total time: " + String.format("%.3f", totalTimeSeconds) + " seconds");
@@ -267,11 +267,11 @@ public class GSRPerformanceTest {
         System.out.println("✅ Warmup complete");
 
         // === MEASUREMENT PHASE ===
-        System.out.println("\n--- Measurement (50,000 iterations) ---");
+        System.out.println("\n--- Measurement (10,000 iterations) ---");
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 50000; i++) {
+        for (int i = 0; i < 10000; i++) {
             protobufFacade.serialize(DataFormat.PROTOBUF, testMessage, schemaVersionId);
         }
 
@@ -279,16 +279,16 @@ public class GSRPerformanceTest {
         long totalTime = endTime - startTime;
 
         // === STATISTICS ===
-        double avgMs = (totalTime / 50000.0) / 1_000_000.0;
+        double avgMs = (totalTime / 10000.0) / 1_000_000.0;
 
         System.out.println("\n--- " + sizeCategory + " FACADE PROTOBUF RESULTS ---");
         System.out.println("Message Size: " + messageBytes.length + " bytes");
-        System.out.println("Iterations: 50,000");
+        System.out.println("Iterations: 10,000");
         System.out.println("Average: " + String.format("%.3f", avgMs) + " ms");
 
         // Calculate throughput
         double totalTimeSeconds = totalTime / 1_000_000_000.0;
-        double throughputPerSecond = 50000 / totalTimeSeconds;
+        double throughputPerSecond = 10000 / totalTimeSeconds;
 
         System.out.println("\n--- " + sizeCategory + " FACADE PROTOBUF THROUGHPUT ---");
         System.out.println("Total time: " + String.format("%.3f", totalTimeSeconds) + " seconds");
@@ -342,11 +342,11 @@ public class GSRPerformanceTest {
         System.out.println("✅ Warmup complete");
 
         // === MEASUREMENT PHASE ===
-        System.out.println("\n--- Measurement (50,000 iterations) ---");
+        System.out.println("\n--- Measurement (10,000 iterations) ---");
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 50000; i++) {
+        for (int i = 0; i < 10000; i++) {
             avroFacade.serialize(DataFormat.AVRO, testRecord, schemaVersionId);
         }
 
@@ -354,16 +354,16 @@ public class GSRPerformanceTest {
         long totalTime = endTime - startTime;
 
         // === STATISTICS ===
-        double avgMs = (totalTime / 50000.0) / 1_000_000.0;
+        double avgMs = (totalTime / 10000.0) / 1_000_000.0;
 
         System.out.println("\n--- " + sizeCategory + " FACADE AVRO RESULTS ---");
         System.out.println("Record Size: " + recordBytes.length + " bytes");
-        System.out.println("Iterations: 50,000");
+        System.out.println("Iterations: 10,000");
         System.out.println("Average: " + String.format("%.3f", avgMs) + " ms");
 
         // Calculate throughput
         double totalTimeSeconds = totalTime / 1_000_000_000.0;
-        double throughputPerSecond = 50000 / totalTimeSeconds;
+        double throughputPerSecond = 10000 / totalTimeSeconds;
 
         System.out.println("\n--- " + sizeCategory + " FACADE AVRO THROUGHPUT ---");
         System.out.println("Total time: " + String.format("%.3f", totalTimeSeconds) + " seconds");

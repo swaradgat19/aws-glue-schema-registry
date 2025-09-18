@@ -3,44 +3,24 @@
   "type": "object",
   "properties": {
     "orderId": {"type": "string"},
-    "customer": {
-      "type": "object",
-      "properties": {
-        "customerId": {"type": "string"},
-        "personalInfo": {
-          "type": "object",
-          "properties": {
-            "firstName": {"type": "string"},
-            "lastName": {"type": "string"},
-            "email": {"type": "string"},
-            "phone": {"type": "string"},
-            "dateOfBirth": {"type": "string"}
-          }
-        },
-        "billingAddress": {
-          "type": "object",
-          "properties": {
-            "street": {"type": "string"},
-            "suite": {"type": "string"},
-            "city": {"type": "string"},
-            "state": {"type": "string"},
-            "zipCode": {"type": "string"},
-            "country": {"type": "string"}
-          }
-        },
-        "shippingAddress": {
-          "type": "object",
-          "properties": {
-            "street": {"type": "string"},
-            "apartment": {"type": "string"},
-            "city": {"type": "string"},
-            "state": {"type": "string"},
-            "zipCode": {"type": "string"},
-            "country": {"type": "string"}
-          }
-        }
-      }
-    },
+    "customerId": {"type": "string"},
+    "customerFirstName": {"type": "string"},
+    "customerLastName": {"type": "string"},
+    "customerEmail": {"type": "string"},
+    "customerPhone": {"type": "string"},
+    "customerDateOfBirth": {"type": "string"},
+    "billingStreet": {"type": "string"},
+    "billingSuite": {"type": "string"},
+    "billingCity": {"type": "string"},
+    "billingState": {"type": "string"},
+    "billingZipCode": {"type": "string"},
+    "billingCountry": {"type": "string"},
+    "shippingStreet": {"type": "string"},
+    "shippingApartment": {"type": "string"},
+    "shippingCity": {"type": "string"},
+    "shippingState": {"type": "string"},
+    "shippingZipCode": {"type": "string"},
+    "shippingCountry": {"type": "string"},
     "items": {
       "type": "array",
       "items": {
@@ -53,54 +33,47 @@
           "quantity": {"type": "integer"},
           "specifications": {
             "type": "object",
-            "additionalProperties": true
+            "properties": {
+              "brand": {"type": "string"},
+              "model": {"type": "string"},
+              "color": {"type": "string"},
+              "weight": {"type": "string"},
+              "batteryLife": {"type": "string"},
+              "length": {"type": "string"},
+              "dataTransfer": {"type": "string"},
+              "powerDelivery": {"type": "string"},
+              "material": {"type": "string"},
+              "adjustable": {"type": "boolean"},
+              "maxWeight": {"type": "string"},
+              "dimensions": {"type": "string"}
+            }
           }
         }
       }
     },
-    "payment": {
-      "type": "object",
-      "properties": {
-        "method": {"type": "string"},
-        "cardInfo": {
-          "type": "object",
-          "properties": {
-            "last4": {"type": "string"},
-            "brand": {"type": "string"},
-            "expiryMonth": {"type": "integer"},
-            "expiryYear": {"type": "integer"}
-          }
-        },
-        "transactionId": {"type": "string"},
-        "amount": {"type": "number"},
-        "currency": {"type": "string"},
-        "status": {"type": "string"}
-      }
+    "paymentMethod": {"type": "string"},
+    "cardLast4": {"type": "string"},
+    "cardBrand": {"type": "string"},
+    "cardExpiryMonth": {"type": "string"},
+    "cardExpiryYear": {"type": "string"},
+    "transactionId": {"type": "string"},
+    "paymentAmount": {"type": "number"},
+    "paymentCurrency": {"type": "string"},
+    "paymentStatus": {"type": "string"},
+    "shippingMethod": {"type": "string"},
+    "shippingCarrier": {"type": "string"},
+    "trackingNumber": {"type": "string"},
+    "estimatedDelivery": {"type": "string"},
+    "shippingCost": {"type": "number"},
+    "createdAt": {"type": "string"},
+    "updatedAt": {"type": "string"},
+    "source": {"type": "string"},
+    "salesRep": {"type": "string"},
+    "promotionCodes": {
+      "type": "array",
+      "items": {"type": "string"}
     },
-    "shipping": {
-      "type": "object",
-      "properties": {
-        "method": {"type": "string"},
-        "carrier": {"type": "string"},
-        "trackingNumber": {"type": "string"},
-        "estimatedDelivery": {"type": "string"},
-        "cost": {"type": "number"}
-      }
-    },
-    "orderMetadata": {
-      "type": "object",
-      "properties": {
-        "createdAt": {"type": "string"},
-        "updatedAt": {"type": "string"},
-        "source": {"type": "string"},
-        "salesRep": {"type": "string"},
-        "promotionCodes": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "notes": {"type": "string"}
-      }
-    }
+    "notes": {"type": "string"}
   },
-  "required": ["orderId", "customer", "items", "payment"]
+  "required": ["orderId", "customerId", "items"]
 }
