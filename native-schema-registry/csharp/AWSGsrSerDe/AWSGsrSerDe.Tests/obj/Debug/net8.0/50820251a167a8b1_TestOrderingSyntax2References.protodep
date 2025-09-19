@@ -1,0 +1,2 @@
+.proto/TestOrderingSyntax2References.cs: /root/.nuget/packages/grpc.tools/2.48.1/build/native/include/google/protobuf/timestamp.proto\
+ ../../../shared/test/protos/TestOrderingSyntax2References.proto

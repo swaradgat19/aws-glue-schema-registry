@@ -1,0 +1,218 @@
+{
+  "format": 1,
+  "restore": {
+    "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/AWSGsrSerDe.Tests.csproj": {}
+  },
+  "projects": {
+    "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/AWSGsrSerDe.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/AWSGsrSerDe.Tests.csproj",
+        "projectName": "AWSGsrSerDe.Tests",
+        "projectPath": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/AWSGsrSerDe.Tests.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/AWSGsrSerDe.csproj": {
+                "projectPath": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/AWSGsrSerDe.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Api.CommonProtos": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.32.1, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.48.1, )"
+            },
+            "KafkaFlow": {
+              "target": "Package",
+              "version": "[3.0.10, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NJsonSchema": {
+              "target": "Package",
+              "version": "[10.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            },
+            "System.Runtime.Caching": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/AWSGsrSerDe.csproj": {
+      "version": "1.1.10",
+      "restore": {
+        "projectUniqueName": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/AWSGsrSerDe.csproj",
+        "projectName": "AWSGsrSerDe",
+        "projectPath": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/AWSGsrSerDe.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Apache.Avro": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.32.1, )"
+            },
+            "KafkaFlow": {
+              "target": "Package",
+              "version": "[3.0.10, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "NJsonSchema": {
+              "target": "Package",
+              "version": "[10.8.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            },
+            "System.Runtime.Caching": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
